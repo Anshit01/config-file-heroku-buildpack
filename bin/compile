@@ -10,6 +10,8 @@ if [ -f $ENV_DIR/CONFIG_FILE_NAME ]; then
 	if [ -f $ENV_DIR/CONFIG_FILE_CONTENT ]; then
 		CONFIG_FILE_CONTENT=`cat $ENV_DIR/CONFIG_FILE_CONTENT`
         echo "-----> Creating $CONFIG_FILE_NAME ..."
+        echo $CONFIG_FILE_CONTENT
+        echo -e $CONFIG_FILE_CONTENT
         echo $CONFIG_FILE_CONTENT > $BUILD_DIR/$CONFIG_FILE_NAME
         echo "       Done."
 		exit 0
