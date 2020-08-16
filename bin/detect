@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Attempting to add config file..."
+exit 0

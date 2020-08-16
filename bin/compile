@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo 'Creating' $CONFIG_FILE_NAME '....'
+echo $CONFIG_FILE_CONTENT > $CONFIG_FILE_NAME
