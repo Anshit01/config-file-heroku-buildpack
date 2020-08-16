@@ -1,4 +1,21 @@
 #!/bin/sh
+# bin/compile <build-dir> <cache-dir> <env-dir>
 
-echo 'Creating' $CONFIG_FILE_NAME '....'
-echo $CONFIG_FILE_CONTENT > $CONFIG_FILE_NAME
+ENV_DIR=${3:-}
+
+
+if [ -f $ENV_DIR/CONFIG_FILE_NAME ]; then
+	CONFIG_FILE_NAME=`cat $ENV_DIR/CONFIG_FILE_NAME`
+	if [ -f $ENV_DIR/CONFIG_FILE_CONTENT ]; then
+		CONFIG_FILE_CONTENT=`cat $ENV_DIR/CONFIG_FILE_CONTENT`
+        echo "-----> Creating $CONFIG_FILE_NAME ..."
+        echo $CONFIG_FILE_CONTENT > $CONFIG_FILE_NAME
+        echo "       Done."
+		exit 0
+	fi
+    echo "CONFIG_FILE_CONTENT is undefined"
+    exit 1
+fi
+
+echo "CONFIG_FILE_NAME is undefined"
+exit 1
