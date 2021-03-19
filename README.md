@@ -4,7 +4,9 @@ This is useful when you don't want to include config file in the github reposito
 
 Steps to use this Buildpack:
 - Add the following config vars in heroku app settings:
-    - CONFIG_FILE_NAME containing the name of config file (eg. config.py for python projects)
-    - CONFIG_FILE_CONTENT containing the data to store in config file.
+    - `CONFIG_FILE_NAME` containing the name of config file (eg. config.py for python projects)
+    - `CONFIG_FILE_CONTENT` containing the data to store in config file.
 
 - Now add this buildpack .git link in the buildpack option and keep this buildpack above the default buildpack.
+
+Buildpack registered at `anshit01/config-file`
